@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="html5" />
+    <meta name="description" content="dropzone.js 演示" />
+    <title>演示：Dropzone.js实现文件拖拽上传</title>
+    <link rel="stylesheet" href="dropzone.css">
+  </head>
+  <body>
+      <div class="container">
+        <div class="row" >
+          <div class="col-md-12">
+            <h2 class="top_title">Dropzone.js实现文件拖拽上传</h2>
+            <div class="row">
+              <div class="col-md-6 col-xs-12 col-md-offset-3">
+                <!-- dropzone 区域-->
+                <div id="file" class="dropzone"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="dropzone.js"></script>
+      <script type="text/javascript">
+        var file = new Dropzone("div#file",{
+          url:            "upload.php",
+          paramName:       "file",
+          maxFilesize:     0.5,//MB
+          maxFiles:        5,
+          acceptedFiles:   ".jpg,.png,.gif"
+        });
+      </script>
+  </body>
+</html>
